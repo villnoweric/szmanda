@@ -17,11 +17,11 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
               
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
-                <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+                <li><a href="{{ url('/') }}" class="nav-link px-2 text-white">Home</a></li>
+                <li><a href="{{ url('/about') }}" class="nav-link px-2 text-white">About</a></li>
             </ul>
     
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="/search" method="get">
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="{{ url('/search') }}" method="get">
                 <input name="sq" type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
             </form>
     
@@ -37,7 +37,7 @@
             <hr>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
                 @foreach ($products as $product)
-                <a href="/product/{{$product->sku}}" style="text-decoration: none;">
+                <a href="{{ url('/product/' . $product->sku) }}" style="text-decoration: none;">
                     <div class="col">
                         <div class="card shadow-sm" style="height:390px;">
                             <div class="card-img-top" style="width:100%; height:225px; position: relative;">
