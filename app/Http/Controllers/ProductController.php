@@ -86,8 +86,8 @@ class ProductController extends Controller
     public function show($id)
     {
         return view('product', [
-            'product' => Product::where('sku', $id)->first(),
-            'details' => json_decode(file_get_contents('https://service.menards.com/ProductDetailsService/v9/products/id/' . $id . '?opt=TRUE&acc=TRUE&promo=TRUE&calc=TRUE&var=TRUE&n=3155&product=TRUE&st-prod=TRUE&rebate=TRUE&inv=TRUE&avail=TRUE&serv-pl=TRUE'),false)
+            'product' => Product::where('sku', $id)->first()
+            //'details' => json_decode(file_get_contents('https://service.menards.com/ProductDetailsService/v9/products/id/' . $id . '?opt=TRUE&acc=TRUE&promo=TRUE&calc=TRUE&var=TRUE&n=3155&product=TRUE&st-prod=TRUE&rebate=TRUE&inv=TRUE&avail=TRUE&serv-pl=TRUE'),false)
         ]);
     }
 

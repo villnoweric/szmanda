@@ -52,7 +52,7 @@
                     <hr>
                     {{$product->longDescription}}
                     <br><br>
-                    SKU: {{$details->productDTO->sku}}<br>
+                    SKU: {{$product->sku}}<br>
                     <?php $pricepoint = $product->pricepoints->last(); ?>
                     @if($pricepoint->onSale)
                         <strike>Price: @convert($pricepoint->listPrice)</strike><br>
