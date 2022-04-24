@@ -64,7 +64,7 @@
                         Rebate: @convert($pricepoint->totalRebate)<br>
                         After Rebate: @convert($pricepoint->listPrice - $pricepoint->totalRebate)
                     @endif
-                
+                    <a role="button" class="btn btn-success float-end" href="https://menards.com/main/p-{{ $product->sku }}.htm">View on Mendards.com</a>
                 </div>
             </div><hr>
             <div style="height:500px;width:100%">
